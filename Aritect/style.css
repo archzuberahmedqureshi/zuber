@@ -1406,7 +1406,7 @@ section {padding: 80px 20px;}
 .contact-us {
   background: #0d0d0d;
   color: #eee;
-  padding: 90px 20px;
+  padding: 70px 15px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -1418,10 +1418,10 @@ section {padding: 80px 20px;}
 /* Heading */
 .contact-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .contact-header h2 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #facd12;
   text-transform: uppercase;
@@ -1430,58 +1430,58 @@ section {padding: 80px 20px;}
 }
 .contact-header h2::after {
   content: "";
-  width: 90px;
+  width: 70px;
   height: 3px;
   background: #facd12;
   display: block;
-  margin: 14px auto 0;
+  margin: 12px auto 0;
   border-radius: 2px;
 }
 .contact-header p {
-  margin-top: 12px;
+  margin-top: 10px;
   color: #bbb;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 /* Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
   align-items: start;
 }
 
 /* Contact Info Card */
 .contact-info {
   background: #161616;
-  padding: 40px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 16px;
   border: 1px solid #2a2a2a;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .contact-info:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.9);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.9);
 }
 .contact-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #facd12;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* Info Items */
 .info-item {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 18px;
   align-items: flex-start;
 }
 .info-item i {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #facd12;
   background: #222;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
@@ -1489,6 +1489,7 @@ section {padding: 80px 20px;}
   color: #facd12;
   text-decoration: none;
   transition: color 0.3s;
+  word-break: break-word; /* Prevents breaking layout */
 }
 .info-item a:hover {
   color: #fff;
@@ -1496,7 +1497,10 @@ section {padding: 80px 20px;}
 
 /* Map */
 .contact-map iframe {
-  border-radius: 20px;
+  width: 100%; /* ✅ Full width for responsiveness */
+  height: 100%;
+  min-height: 350px;
+  border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
@@ -1504,8 +1508,34 @@ section {padding: 80px 20px;}
 @media (max-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .contact-header h2 {
+    font-size: 2rem;
   }
   .contact-map iframe {
     height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-us {
+    padding: 50px 12px;
+  }
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+  .contact-info {
+    padding: 20px;
+  }
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+  .info-item i {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  .contact-map iframe {
+    height: 250px;
   }
 }
